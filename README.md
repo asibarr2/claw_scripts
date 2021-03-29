@@ -1,5 +1,5 @@
 ## RaspClaw Scripts
-This package contains the scripts for making the raspclaw lean left, right and standup. The move.py is also in here but Adeept_raspclaws must be working in order to use this script. If you have not met with me to fix your bot, this will not help you until you meet me during my office hours.
+This package contains the scripts for making the raspclaw lean left, right and standup. The move.py is also in here but Adeept_raspclaws must be working in order to use this script. You can copy the __move.py__ located in the __backup_code__ directory and replace the __move.py__ in __Adeept_RaspClaw/server__ so that it prevents your robot from shutting off due to the pi not being able to handle all servos going off at once. If you have not met with me to fix your bot, this will not help you until you meet me during my office hours.
 
 You can take this code and edit it to your liking. It is open source and I have no issue with you making edits. However, just executing this code and expecting your robot to work will take effort on your part. If you show this to Dr. Jamshidi without any effort in expanding on the code during your final presentation and you merely copy and pasted, I will call you out on it and report it to Dr. Jamshidi.
 
