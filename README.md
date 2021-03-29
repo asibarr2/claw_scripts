@@ -10,7 +10,7 @@ If you have any questions, email me at: asibarra98@gmail.com
 I will be glad to help.
 
 ## Execution
-This is pretty simple to setup after Adeept_Raspclaw package is set up in your robot. Just change into this package directory and execute the code like so:
+This is pretty simple to set up after Adeept_Raspclaw package is set up in your robot. Just change into this package directory and execute the code like so:
 
 __./lean_left.py__
 
