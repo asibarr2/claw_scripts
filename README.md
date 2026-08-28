@@ -1,21 +1,43 @@
-## RaspClaw Scripts
-This package contains the scripts for making the raspclaw lean left, right and standup. The move.py is also in here but Adeept_raspclaws must be working in order to use this script. You can copy the __move.py__ located in the __backup_code__ directory and replace the __move.py__ in __Adeept_RaspClaw/server__ so that it prevents your robot from shutting off due to the pi not being able to handle all servos going off at once. If you have not met with me to fix your bot, this will not help you until you meet me during my office hours.
+# RaspClaw Scripts
 
-You can take this code and edit it to your liking. It is open source and I have no issue with you making edits. However, just executing this code and expecting your robot to work will take effort on your part. If you copy and paste this code without making any changes, and you show it as your final results in your final presentation, and claim it as your own code without changing anything, I will know and report it to Dr. Jamshidi.
+Example scripts for controlling a RaspClaw hexapod robot's basic movements — leaning left, leaning right, and standing up — built on top of the Adeept RaspClaw servo control library.
 
-This is merely examples on how to move your robot's legs and to give you an idea and some motivation to take it further and add modules like implementing this in a obstacle avoidance program or a object tracking program. 
+## Overview
 
-If you have any questions, email me at: asibarra98@gmail.com
+This repo contains simple shell scripts that trigger corresponding Python movement routines for the RaspClaw robot. A modified `move.py` is also included, which fixes an issue where all servos activating simultaneously can overload the Raspberry Pi and cause the robot to shut off.
 
-I will be glad to help.
+## Requirements
 
-## Execution
-This is pretty simple to set up after Adeept_Raspclaw package is set up in your robot. Just change into this package directory and execute the code like so:
+- A RaspClaw robot with the [Adeept_RaspClaw](https://github.com/adeept/Adeept_RaspClaw) package already installed and working on the robot's Raspberry Pi
+- Python 3
 
-__./lean_left.py__
+## Setup
 
-and pretty much just add __./__ in front of the green highlighted text.
+1. Copy this package onto your RaspClaw's Raspberry Pi.
+2. Replace the `move.py` in `Adeept_RaspClaw/server/` with the one provided in `backup_code/` here — this prevents the robot from cutting out when many servos move at once.
 
-If you want to make changes to the code, change into the __backup_code__ directory and edit any of the codes. 
+## Usage
 
-Let me know if you have any questions.
+From this package's directory on the robot:
+
+```bash
+./lean_left.sh
+./lean_right.sh
+./standup.sh
+```
+
+Each script is a thin wrapper that runs the corresponding Python movement routine in `backup_code/`.
+
+## Customizing
+
+To modify the movement logic itself, edit the Python scripts inside `backup_code/`. These are meant as a starting point — a working example of how to move the robot's legs — not a finished behavior. Extending them into something like obstacle avoidance or object tracking is the intended next step.
+
+## Notes
+
+- `lean_left.sh` currently references `backup_code/lean_lef.py` — check that this matches the actual filename in `backup_code/` (looks like it may be a typo for `lean_left.py`) if the script fails to run.
+
+## Academic use
+
+This was built as instructional material for a robotics course. You're welcome to use and modify this code freely, but if you're a student using it for a course assignment or final presentation, make sure any changes reflect genuine understanding and effort — submitting it unmodified as original work will be recognizable as such.
+
+Questions welcome — reach out at asibarra98@gmail.com.
